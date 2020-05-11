@@ -13,5 +13,5 @@ script:
  - cargo run --release
 
 deploy:
- provider: pages
+ provider: master
 
