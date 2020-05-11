@@ -10,7 +10,7 @@ install:
  - cargo build
 
 script:
- - cargo run --release
+ - cargo run 
 
 deploy:
  provider: master
