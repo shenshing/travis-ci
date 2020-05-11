@@ -1,0 +1,17 @@
+language: rust
+rust:
+ - stable
+ - beta
+ - nightly
+
+before_install:
+
+install:
+ - cargo build
+
+script:
+ - cargo run --release
+
+deploy:
+ provider: pages
+
