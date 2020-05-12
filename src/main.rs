@@ -4,7 +4,7 @@
 
 #[get("/")]
 fn hello() -> String {
-    format!("Hello")
+    format!("Hello world")
 }
 
 fn main() {

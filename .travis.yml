@@ -1,25 +1,26 @@
-language: rust
-rust:
- - stable
- - beta
- - nightly
+# language: rust
+# rust:
+#  - stable
+#  - beta
+#  - nightly
 
-before_install:
+# before_install:
 
-install:
- - cargo build
+# install:
+#  - cargo build
 
-script:
-#  - rustup default nightly
-#  - cargo run --release
-    - mkdir -p ~/.ssh && chmod 700 ~/.ssh
-    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - echo -e "Host *\n\tLogLevel ERROR\n\n" >> ~/.ssh/config
-    - echo -e "Host *\n\tUserKnownHostsFile /dev/null\n\n" >> ~/.ssh/config
-    - echo $BUILD > BUILD
-    - chmod +x BUILD
-    - ./BUILD
+# script:
+# #  - rustup default nightly
+# #  - cargo run --release
+#     # - echo "Hello world"
+#     # - mkdir -p ~/.ssh && chmod 700 ~/.ssh
+#     # - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+#     # - echo -e "Host *\n\tLogLevel ERROR\n\n" >> ~/.ssh/config
+#     # - echo -e "Host *\n\tUserKnownHostsFile /dev/null\n\n" >> ~/.ssh/config
+#     # - echo $BUILD > BUILD
+#     # - chmod +x BUILD
+#     # - ./BUILD
 
-deploy:
- provider: master
+# deploy:
+#  provider: master
 
