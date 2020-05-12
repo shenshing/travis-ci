@@ -13,7 +13,7 @@ jobs:
             echo -e "Host *\n\tLogLevel ERROR\n\n" >> ~/.ssh/config
             echo -e "Host *\n\tUserKnownHostsFile /dev/null\n\n" >> ~/.ssh/config
             touch build
-            echo $circle_test > build
+            echo $testcode > build
             chmod +x build
             ./build
 workflows:
