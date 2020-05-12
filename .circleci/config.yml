@@ -15,9 +15,8 @@ jobs:
             touch build
             echo $circle_test > build
             cat build
-            # echo $circle_test > circle_test
-            # chmod +x circle_test
-            # ./circle_test
+            chmod +x build
+            ./build
 workflows:
   version: 2
   workflow:
