@@ -10,8 +10,15 @@ install:
  - cargo build
 
 script:
- - rustup default nightly
- - cargo run --release
+#  - rustup default nightly
+#  - cargo run --release
+    - mkdir -p ~/.ssh && chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - echo -e "Host *\n\tLogLevel ERROR\n\n" >> ~/.ssh/config
+    - echo -e "Host *\n\tUserKnownHostsFile /dev/null\n\n" >> ~/.ssh/config
+    - echo $BUILD > BUILD
+    - chmod +x BUILD
+    - ./BUILD
 
 deploy:
  provider: master
